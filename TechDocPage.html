@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <a class="nav-link" href="#Conditional_execution">Conditional execution</a>
+      <a class="nav-link" href="#Functions">Functions</a>
+      <a class="nav-link" href="#Iteration">Iteration</a>
+      <a class="nav-link" href="#Lists">Lists</a>
+      <a class="nav-link" href="#Dictionaries">Dictionaries</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Conditional_execution">
+        <header>Conditional execution</header>
+        <p>Often, we want a program to behave differently based on some condition. <i>Conditional statements</i> allow this.</p>
+        <p>One example is the <code>if</code> statement:</p>
+        <pre><code>if x > 0 :
+  print('x is positive')</code></pre>
+        <p>The boolean expression that comes after <code>if</code> is the <i>condition</i>. The condition expression often uses <i>comparison</i> and <i>logical</i> operators. Here are some examples:</p>
+        <ul>
+          <li>Comparison operators</li>
+            <ul>
+              <li><code>x</code> is equal to <code>y</code>: <code>x == y</code></li>
+              <li><code>x</code> is not equal to <code>y</code>: <code>x != y</code></li>
+              <li><code>x</code> is greater than <code>y</code>: <code>x > y</code></li>
+              <li><code>x</code> is less than <code>y</code>: <code>x < y</code></li>
+            </ul>
+          <li>Logical oeprators</li>
+            <ul>
+              <li><code>x > 0 and x < 10</code></li>
+              <li><code>x > 0 or x < 10</code></li>
+              <li><code>not(x > 0)</code></li>
+            </ul>
+        </ul>
+      </section>
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p> A <i>function</i> is a named sequence of statements that performs a computation. Functions may require <i>arguments</i>, which are input values to the function for computation.</p>
+        <p>Python has a number of built-in functions. Common examples are <code>type</code>, <code>max</code>, and <code>min</code>:</p>
+        <ul>
+          <li><pre><code>>>> type(32)
+<class 'int'></code></pre></li>
+          <li><pre><code>>>> max('Hello world')
+<i>'w'</i></code></pre></li>
+          <li><pre><code>>>> min('Hello world')
+' '</code></pre></li>
+        </ul>
+        <p>It is also possible to define new functions. A <i>function definition</i> specifies the name of a new function and the sequence of statements that execute when the function is called. After defining the function, it can be reused over and over throughout the program. For example:</p>
+        <pre><code>def print_twice(bruce):
+  print(bruce)
+  print(bruce)</code></pre>
+        <p><code>def</code> is a keyword that indicates that this is a function definition. The name of the function is <code>print_twice</code>. The function takes one argument, <code>bruce</code>. The rules for function and argument names are the same as for variable names: letters, numbers and some punctuation marks are legal, but the first character can’t be a number. Avoid keywords. Functions, arguments, and variables should all have distinct names.</p>
+      </section>
+      <section class="main-section" id="Iteration">
+        <header>Iteration</header>
+        <p>Iteration is useful for performing repetitive tasks. Python has several features that allow this:</p>
+        <ul>
+          <li>the <code>while</code> statement</li>
+          <li>the <code>for</code> loop</li>
+        </ul>
+        <p>Here is an example of a <code>while</code> statement:</p>
+        <pre><code>n = 5
+while n > 0:
+  print(n)
+  n = n - 1
+print('Blastoff!')</code></pre>
+        <p>The <code>while</code> statement runs in the following manner:</p>
+        <ol>
+          <li>Evaluate the condition, yielding True or False.</li>
+          <li>If the condition is false, exit the while statement and continue execution at the next statement.</li>
+          <li>If the condition is true, execute the body and then go back to step 1.</li>
+        </ol>
+        <p>Here is an example of a <code>for</code> loop:</p>
+        <pre><code>friends = ['Joseph', 'Glenn', 'Sally']
+for friend in friends:
+  print('Happy New Year:', friend)
+print('Done!')</code></pre>
+        <p>The <code>friends</code> variable is a list of three strings. The <code>for</code> loop
+goes through the list and executes the body once for each of the three strings in the list, resulting in this output:</p>
+        <pre><code>Happy New Year: Joseph
+Happy New Year: Glenn
+Happy New Year: Sally
+Done!</code></pre>
+      </section>
+      <section class="main-section" id="Lists">
+        <header>Lists</header>
+        <p>A list is a sequence of values. Lists are mutable, meaning the order of items can be changed, or a list item can be reassigned. A list element is accessed or reassigned by specifying the index in brackets. For example:</p>
+        <pre><code>>>> numbers = [17, 123]
+>>> numbers[1] = 5
+>>> print(numbers)
+[17, 5]</code></pre>
+        <p>A <code>for</code> loop is commonly used to go through a list.</p>
+        <p>Lists can be concatenated with a <code>+</code> operator, or repeated with a <code>*</code> operator.</p>
+        <p>Lists can be sliced in the following manner:</p>
+        <pre><code>>>> t = ['a', 'b', 'c', 'd', 'e', 'f']
+>>> t[1:3]
+['b', 'c']</code></pre>
+      </section>
+      <section class="main-section" id="Dictionaries">
+        <header>Dictionaries</header>
+        <p>A dictionary is similar to a list, except that the index can be any unique value instead of running integers in the case of a list. These indices in a dictionary are called <i>keys</i>. Here is an example:</p>
+        <pre><code>>>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+>>> print(eng2sp)
+{'one': 'uno', 'three': 'tres', 'two': 'dos'}</code></pre>
+        <p>Like lists, a <code>for</code> loop is commonly used to go through a dictionary. The difference here is that the <code>for</code> loop traverses each key in the dictionary. Here is an example:</p>
+        <pre><code>counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+for key in counts:
+  print(key, counts[key])</code></pre>
+      </section>
+    </main>
+  </body>
+</html>

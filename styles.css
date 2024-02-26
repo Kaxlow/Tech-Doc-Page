@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  font-size: 32px;
+  font-family: Lato, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 30px;
+}
+
+main {
+  position: absolute;
+  left: 400px;
+}
+
+#navbar {
+  position: fixed;
+}
+
+#navbar header {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+  }
+
+  main {
+    position: static;
+  }
+
+  #navbar {
+    position: static;
+  }
+}
